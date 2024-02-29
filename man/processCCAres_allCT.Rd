@@ -9,7 +9,13 @@ processCCAres_allCT(cca_res, x, obj1, y, obj2)
 \arguments{
 \item{cca_res}{CCA res}
 
-\item{annot}{metadata}
+\item{x}{df of obj1}
+
+\item{obj1}{obj1}
+
+\item{y}{df of obj2}
+
+\item{obj2}{obj2}
 }
 \value{
 cca_res_updated updated cca_res with info
@@ -18,5 +24,5 @@ cca_res_updated updated cca_res with info
 process CCA res to incluide extra info from all cell-types
 }
 \examples{
-processCCAres_allCT(df,annot)
+processCCAres_allCT(cca_res, x, obj1,y,obj2)
 }

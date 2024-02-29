@@ -4,12 +4,14 @@
 \alias{run_07_rankPathways}
 \title{run_07_rankPathways}
 \usage{
-run_07_rankPathways(cca_res, p.info)
+run_07_rankPathways(cca_res, p.info, w_opt)
 }
 \arguments{
 \item{cca_res}{CCA res}
 
 \item{p.info}{pathway info}
+
+\item{w_opt}{to use weighted pathways scores}
 }
 \value{
 rankP ranked pathways with info
@@ -18,5 +20,5 @@ rankP ranked pathways with info
 rank pathways
 }
 \examples{
-run_07_rankPathways()
+run_07_rankPathways(cca_res,p.info,w_opt)
 }

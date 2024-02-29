@@ -4,12 +4,14 @@
 \alias{rankPathwaysCorrelation}
 \title{rankPathwaysCorrelation}
 \usage{
-rankPathwaysCorrelation(cca_res, p.info)
+rankPathwaysCorrelation(cca_res, p.info, w_opt)
 }
 \arguments{
 \item{cca_res}{CCA res}
 
 \item{p.info}{pathways info}
+
+\item{w_opt}{to use weighted pathways scores}
 
 \item{id.list}{id names for the objects}
 }
@@ -20,5 +22,5 @@ rankP.cor  ranked pathways based on correlation
 rank pathways based on correlation
 }
 \examples{
-rankPathwaysRegression()
+rankPathwaysCorrelation(cca_res,p.info,w_opt)
 }

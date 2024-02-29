@@ -4,12 +4,14 @@
 \alias{df2obj}
 \title{df2obj}
 \usage{
-df2obj(df, annot)
+df2obj(df, annot, nVarF)
 }
 \arguments{
 \item{df}{dataframe}
 
 \item{annot}{metadata}
+
+\item{nVarF}{number variable features}
 }
 \value{
 obj object

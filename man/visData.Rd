@@ -6,6 +6,15 @@
 \usage{
 visData(df, annot, p.df, opfname)
 }
+\arguments{
+\item{df}{dataframe}
+
+\item{annot}{metadata for df}
+
+\item{p.df}{dataframe holding pathways info}
+
+\item{opfname}{file name to save plot}
+}
 \description{
 visualize dataframe
 }

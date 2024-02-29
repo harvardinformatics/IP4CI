@@ -4,10 +4,10 @@
 \alias{run_06_similarityCalculation}
 \title{run_06_similarityCalculation}
 \usage{
-run_06_similarityCalculation(cca_res, annot, id.list, ct, res_dir)
+run_06_similarityCalculation(merged_res, annot, id.list, ct, res_dir)
 }
 \arguments{
-\item{cca_res}{cca results}
+\item{merged_res}{merged_res results either from cca or integration}
 
 \item{annot}{metadata}
 
@@ -21,5 +21,5 @@ run_06_similarityCalculation(cca_res, annot, id.list, ct, res_dir)
 calculate similarity between two datasets based on CCA info
 }
 \examples{
-run_06_similarityCalculation(cca_res,annot,id.list,ct,res_dir)
+run_06_similarityCalculation(merged_res,annot,id.list,ct,res_dir)
 }

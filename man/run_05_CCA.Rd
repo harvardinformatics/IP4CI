@@ -4,7 +4,7 @@
 \alias{run_05_CCA}
 \title{run_05_CCA}
 \usage{
-run_05_CCA(obj1, obj2)
+run_05_CCA(obj1, obj2, num.cc)
 }
 \arguments{
 \item{obj1}{object of dataset 1}
@@ -12,7 +12,7 @@ run_05_CCA(obj1, obj2)
 \item{obj2}{object of dataset 2}
 }
 \value{
-CCA.obj CCA results
+ccaRes CCA results
 }
 \description{
 run Seurat CCA over two objectes

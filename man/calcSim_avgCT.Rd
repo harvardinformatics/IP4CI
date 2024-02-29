@@ -21,5 +21,5 @@ calcSim_avgCT(df, annot, id.list, ct, res_dir)
 calculate average similarity between two datasets based on CCA info for each cell-type
 }
 \examples{
-calcSim_avgCT(df, annot, id.list,res_dir)
+calcSim_avgCT(df, annot, id.list,df_type, ct, res_dir)
 }

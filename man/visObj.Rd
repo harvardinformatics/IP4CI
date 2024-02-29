@@ -4,10 +4,12 @@
 \alias{visObj}
 \title{visObj}
 \usage{
-visObj(obj, opfname)
+visObj(obj, dim_name, opfname)
 }
 \arguments{
 \item{obj}{object}
+
+\item{dim_name}{dim name to use 'umap' or 'cca'}
 
 \item{opfname}{file name to save plot}
 }
@@ -15,5 +17,5 @@ visObj(obj, opfname)
 visualize obj using Seurat
 }
 \examples{
-visObj(obj,opfname)
+visObj(obj,dim_name,opfname)
 }

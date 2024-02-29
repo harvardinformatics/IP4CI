@@ -4,11 +4,9 @@
 \alias{getVariableFeatures}
 \title{getVariableFeatures}
 \usage{
-getVariableFeatures(sc, no_feat)
+getVariableFeatures(sc)
 }
 \arguments{
-\item{no_feat}{number of features}
-
 \item{sc_obj}{obj}
 }
 \value{
@@ -18,5 +16,5 @@ name of method used to select fetaures
 get method of variable features from obj
 }
 \examples{
-getVariableFeatures(sc_obj,no_feat)
+getVariableFeatures(sc_obj)
 }
