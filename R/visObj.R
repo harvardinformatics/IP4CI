@@ -1,13 +1,14 @@
 #' @title  visObj
 #' @description visualize obj using Seurat
 #' @param obj object
+#' @param dim_name dim name to use 'umap' or 'cca'
 #' @param opfname file name to save plot
 #' @examples
-#'visObj(obj,opfname)
+#'visObj(obj,dim_name,opfname)
 #'@export
 
 ################################################################################
-visObj <- function(obj,opfname)
+visObj <- function(obj,dim_name,opfname)
 {
   print('visObj:...')
   print(obj)
@@ -17,22 +18,41 @@ visObj <- function(obj,opfname)
   pdf(opfname, width = 12, height = 6)
   if(length(unique(obj@meta.data$dataset_name))>1) # 2 datasets
   {
-    p1=DimPlot(obj, shape.by='type' , group.by ="dataset_name",pt.size =  0.9,reduction = "umap", label = TRUE,repel = TRUE) + ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
-      theme(plot.title = element_text(size = 25, face = "bold")) #oLegend()+
-    my_colors <- scales::hue_pal()(length(unique(obj@meta.data$type)))
-    p2=DoHeatmap(object = obj)+ ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
-      scale_color_manual(values = my_colors,limits = unique(obj@meta.data$type))#features =
+    p1=DimPlot(obj, group.by   ="dataset_name",pt.size =  0.9,reduction = dim_name, label = TRUE,repel = TRUE) + ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
+      theme(plot.title = element_text(size = 25, face = "bold"))+ NoLegend()
+
+    obj@meta.data$type_dataset = paste0(obj@meta.data$dataset_name,':',obj@meta.data$type)
+    p2=DimPlot(obj, group.by  ="type_dataset",pt.size =  0.9,reduction = dim_name, label = TRUE,repel = TRUE) + ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
+      theme(plot.title = element_text(size = 25, face = "bold")) +NoLegend()
+
+    p3=DimPlot(obj, split.by   ="dataset_name",pt.size =  0.9,reduction = dim_name, label = TRUE,repel = TRUE) + ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
+      theme(plot.title = element_text(size = 25, face = "bold"))+ NoLegend()
+
+    p4=DimPlot(obj, group.by   ="type",pt.size =  0.9,reduction = dim_name, label = TRUE,repel = TRUE) + ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
+      theme(plot.title = element_text(size = 25, face = "bold"))+ NoLegend()
+
+    # p3= DimPlot(obj, reduction = "umap", group.by = "type", label = TRUE, repel = TRUE) +
+    #   NoLegend()
+
+    # my_colors <- scales::hue_pal()(length(unique(obj@meta.data$type)))
+    # p2=DoHeatmap(object = obj)+ ggtitle(paste0(unique(obj@meta.data$dataset_name)[1],'&',unique(obj@meta.data$dataset_name)[2]))+
+    #   scale_color_manual(values = my_colors,limits = unique(obj@meta.data$type))#features =
+    print(p1)
+    print(p2)
+    print(p3)
+    print(p4)
   }
   else # one dataset
   {
-    p1=DimPlot(obj, group.by='type' , shape.by ="dataset_name",pt.size =  0.9,reduction = "umap", label = TRUE,repel = TRUE) + ggtitle(unique(obj@meta.data$dataset_name)[1])+
+    p1=DimPlot(obj, group.by='type' , shape.by ="dataset_name",pt.size =  0.9,reduction =dim_name, label = TRUE,repel = TRUE) + ggtitle(unique(obj@meta.data$dataset_name)[1])+
       theme(plot.title = element_text(size = 25, face = "bold")) #oLegend()+
     my_colors <- scales::hue_pal()(length(unique(obj@meta.data$type)))
     p2=DoHeatmap(object = obj)+ ggtitle(unique(obj@meta.data$dataset_name))+
       scale_color_manual(values = my_colors,limits = unique(obj@meta.data$type))#features =
+    print(p1)
+    print(p2)
+
   }
-  print(p1)
-  print(p2)
 
   # plot varFeat
   # top10 <- head(VariableFeatures(obj), 10)

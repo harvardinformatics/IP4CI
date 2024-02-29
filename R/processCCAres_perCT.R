@@ -24,6 +24,12 @@ processCCAres_perCT <-function(cca_res,x,y)
   yscores <- y.aux.calc %*% v
   cor=diag(cor(xscores,yscores))
   print(cor)
+
+  xscoresW <- apply(xscores,2,function(x) x/sqrt(sum(x*x)))
+  yscoresW <- apply(yscores,2,function(x) x/sqrt(sum(x*x)))
+  corW=diag(cor(xscoresW,yscoresW))
+
+
   no_cc_selected = length(cor)
   ul <- t(x.aux.calc) %*% xscores# sampleXpathway . pathwaysXcc == sampleXcc
   vl <- t(y.aux.calc) %*% yscores
@@ -36,6 +42,11 @@ processCCAres_perCT <-function(cca_res,x,y)
   cca_res$xscores =xscores
   cca_res$yscores =yscores
   cca_res$cor =cor
+
+  cca_res$xscoresW =xscoresW
+  cca_res$yscoresW =yscoresW
+  cca_res$corW =corW
+
   cca_res$x =x
   cca_res$y =y
   colnames(cca_res$u)= seq(1:no_cc_selected)
@@ -44,6 +55,8 @@ processCCAres_perCT <-function(cca_res,x,y)
   colnames(cca_res$vl)= seq(1:no_cc_selected)
   colnames(cca_res$xscores)= seq(1:no_cc_selected)
   colnames(cca_res$yscores)= seq(1:no_cc_selected)
+  colnames(cca_res$xscoresW)= seq(1:no_cc_selected)
+  colnames(cca_res$yscoresW)= seq(1:no_cc_selected)
 
   return(cca_res)
 }

@@ -3,18 +3,24 @@
 #' @param cca_res CCA res
 #' @param id.list id names for the objects
 #' @param p.info pathways info
+#' @param w_opt to use weighted pathways scores
 #' @return rankP.cor  ranked pathways based on correlation
 #' @examples
-#' rankPathwaysRegression()
+#' rankPathwaysCorrelation(cca_res,p.info,w_opt)
 #' @export
 ################################################################################
-rankPathwaysCorrelation <- function(cca_res,p.info)
+rankPathwaysCorrelation <- function(cca_res,p.info,w_opt)
 {
   print('rankPathwaysCorrelation:...')
   x_p = cca_res$xscores
   y_p = cca_res$yscores
   print(dim(x_p))
   print(dim(y_p))
+  if(w_opt ==T)
+  {
+    x_p = cca_res$xscoresW
+    y_p = cca_res$yscoresW
+  }
   cnames=c('p_id','cor')
   rankP.cor =  setNames(data.frame(matrix(ncol = length(cnames), nrow = nrow(x_p))),cnames)
   rownames(rankP.cor) = rownames(x_p)

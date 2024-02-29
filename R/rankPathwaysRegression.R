@@ -2,18 +2,27 @@
 #' @description rank pathways based on regression
 #' @param cca_res CCA res
 #' @param p.info pathways info
+#' @param w_opt to use weighted pathways scores
 #' @return rankP.reg  ranked pathways based on regression
 #' @examples
-#' rankPathwaysRegression()
+#' rankPathwaysRegression(cca_res, p.info, w_opt)
 #' @export
 ################################################################################
-rankPathwaysRegression <- function(cca_res, p.info)
+rankPathwaysRegression <- function(cca_res, p.info, w_opt)
 {
   print('rankPathwaysRegression:...')
-
   x_scores = cca_res$xscores
   y_scores = cca_res$yscores
   cor = cca_res$cor
+
+  if(w_opt == T)
+  {
+    x_scores = cca_res$xscoresW
+    y_scores = cca_res$yscoresW
+    cor = cca_res$corW
+  }
+
+
   print(dim(x_scores))
   print(dim(y_scores))
 
