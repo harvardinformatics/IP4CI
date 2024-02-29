@@ -1,0 +1,98 @@
+Package: DA4CA
+Type: Package
+Title: Data alignment for cell-type annotation
+Version: 0.1.0
+Author: Rawan Olayan
+Maintainer: The package maintainer <rawanolayan@fas.harvard.edu>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Collate: 
+    'run_packages.R'
+    'RnamingCTconv.R'
+    'calcLogFC.R'
+    'calcSim_avgCT.R'
+    'createDir.R'
+    'run_09_detectUnknownCT.R'
+    'df2obj.R'
+    'getCommonGenesPerPathway.R'
+    'getCommonPathways.R'
+    'getEnrichedGenes.R'
+    'getMetadataStat.R'
+    'getOverlapMarkers.R'
+    'getPathwaysInfo.R'
+    'hello.R'
+    'jaccard.R'
+    'mergeMultiFiles.R'
+    'performMarkersAnalysis.R'
+    'plotMetadataStat.R'
+    'plotRankingG.R'
+    'plotRankingP.R'
+    'processCCAres_allCT.R'
+    'processCCAres_perCT.R'
+    'processObj.R'
+    'rankPathwaysCorrelation.R'
+    'rankPathwaysRegression.R'
+    'runGSEA.R'
+    'run_00_preprocessData.R'
+    'run_01_processData.R'
+    'run_02_gsea.R'
+    'run_02_gseaFast.R'
+    'run_03_sampleScoring.R'
+    'run_04_mergeTwoDatasets.R'
+    'run_05_CCA.R'
+    'run_06_similarityCalculation.R'
+    'run_07_rankPathways.R'
+    'run_08_rankGenes.R'
+    'visData.R'
+    'visObj.R'
+    'getVariableFeatures.R'
+    'plotCombineRankingPathways.R'
+    'checkGexprDensity.R'
+    'processIntegratedres_allCT.R'
+    'run_05_dataIntegration.R'
+    'run_06_similarityCalculationIntegration.R'
+    'runDA4CA.R'
+    'SubsetObjVarF.R'
+  'selectCCA.R'
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    olsrr,
+    BiocParallel,
+    devtools,
+    gridExtra,
+    matrixStats,
+    STRINGdb,
+    corpcor,
+    mixOmics,
+    reticulate,
+    ggplot2,
+    ggpubr,
+    RColorBrewer,
+    psych,
+    reshape,
+    Seurat,
+    ggrepel,
+    fastICA,
+    pheatmap,
+    corrplot,
+    rbioapi,
+    PRROC,
+    ReactomePA,
+    uwot,
+    plyr,
+    org.Mm.eg.db,
+    org.Hs.eg.db,
+    reactome.db,
+    clusterProfiler,
+    sjmisc,
+    stringr,
+    dplyr,
+    irlba,
+    ComplexHeatmap
