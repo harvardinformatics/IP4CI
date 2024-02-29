@@ -9,4 +9,4 @@ From terminal type:
 R CMD INSTALL --no-multiarch --with-keep.source IP4CI
 
 
-
+*TO DO : step-by-step doc with comment*
