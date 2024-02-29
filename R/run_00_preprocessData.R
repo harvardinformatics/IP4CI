@@ -27,6 +27,7 @@ run_00_preprocessData <- function(data_dir,res_dir,
                                   convertG.list,processObjOpt,
                                   typeColumnToUse.list,assaySlotToUse.list)
 {
+
 print('run_00_preprocessData:...')
 
   # 0. read
@@ -52,8 +53,8 @@ if(convertG.list[[1]])
   annot1 = obj1.tmp@meta.data
   obj1<- CreateSeuratObject(
     counts=df1,
-    project = "DA4CA.1",
-    assay = "DA4CA.1",
+    project = "IP4CI.1",
+    assay = "IP4CI.1",
     min.cells = 0,
     min.features =0,
     names.field = 1,
@@ -65,8 +66,8 @@ if(convertG.list[[1]])
   annot2 = obj2.tmp@meta.data
   obj2<- CreateSeuratObject(
     counts=df2,
-    project = "DA4CA.2",
-    assay = "DA4CA.2",
+    project = "IP4CI.2",
+    assay = "IP4CI.2",
     min.cells = 0,
     min.features =0,
     names.field = 1,
@@ -77,10 +78,10 @@ if(convertG.list[[1]])
   #
   # OR 1. as recommended by Seurat
   # assay.name.1 = assaySlotToUse.list[[1]]
-  # obj1[['DA4CA.1']] = obj1[[assay.name.1]]
+  # obj1[['IP4CI.1']] = obj1[[assay.name.1]]
   # obj1[[assay.name.1]] = NULL
   # assay.name.2 = assaySlotToUse.list[[2]]
-  # obj2[['DA4CA.2']] = obj2[[assay.name.2]]
+  # obj2[['IP4CI.2']] = obj2[[assay.name.2]]
   # obj2[[assay.name.2]] = NULL
 
   # # 2. deals with commonCol for each annot
@@ -107,7 +108,7 @@ if(convertG.list[[1]])
   # obj2@meta.data = obj2@meta.data[,commonCol]
 
   # rename cells obj & annot
-  cell.names = colnames(obj1@assays$DA4CA.1@counts)
+  cell.names = colnames(obj1@assays$IP4CI.1@counts)
   cell.names.new<- gsub("-", ".", cell.names)
   cell.names.new<- gsub("/", ".", cell.names.new)
   cell.names.new<- gsub(" ", "_", cell.names.new)
@@ -116,7 +117,7 @@ if(convertG.list[[1]])
   rownames(obj1@meta.data)<- gsub("/", ".", rownames(obj1@meta.data))
   rownames(obj1@meta.data)<- gsub(" ", "_", rownames(obj1@meta.data))
 
-  cell.names = colnames(obj2@assays$DA4CA.2@counts)
+  cell.names = colnames(obj2@assays$IP4CI.2@counts)
   cell.names.new<- gsub("-", ".", cell.names)
   cell.names.new<- gsub("/", ".", cell.names.new)
   cell.names.new<- gsub(" ", "_", cell.names.new)

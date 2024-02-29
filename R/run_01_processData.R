@@ -26,16 +26,16 @@ run_01_processData <- function(data_dir,res_dir, id.list,obj.fname.list,genes2ke
   print('run_01_processData:...')
 
   # 1. read obj
-  # obj1 = readRDS(paste0(data_dir,obj.fname.list[[1]]))
-  # print(obj1)
-  # obj2 = readRDS(paste0(data_dir,obj.fname.list[[2]]))
-  # print(obj2)
+  obj1 = readRDS(paste0(data_dir,obj.fname.list[[1]]))
+  print(obj1)
+  obj2 = readRDS(paste0(data_dir,obj.fname.list[[2]]))
+  print(obj2)
 
   # 2. add dataset_name, type col to metadata
-  # obj1@meta.data$dataset_name=id.list[[1]]
-  # obj2@meta.data$dataset_name=id.list[[2]]
-  # Idents(object = obj1) = obj1@meta.data$type
-  # Idents(object = obj2) = obj2@meta.data$type
+  obj1@meta.data$dataset_name=id.list[[1]]
+  obj2@meta.data$dataset_name=id.list[[2]]
+  Idents(object = obj1) = obj1@meta.data$type
+  Idents(object = obj2) = obj2@meta.data$type
 
 
   # 4. keep genes
@@ -46,43 +46,42 @@ if(genes2keep == 'unionVarG')
  # vf12 = union(vf1,vf2)
 }
 
-#   if(genes2keep == 'commonVarG')
-  {
-    #   vf1 = obj1@assays$DA4CA.1@var.features
-    #   print(length(vf1))
-    #   vf2 = obj2@assays$DA4CA.2@var.features
-    #   print(length(vf2))
+  if(genes2keep == 'commonVarG')
+   {
+      vf1 = obj1@assays$IP4CI.1@var.features
+      print(length(vf1))
+      vf2 = obj2@assays$IP4CI.2@var.features
+      print(length(vf2))
 
 
-#     vf12 = intersect(vf1,vf2)
-# message('vf12:  ',length(vf12))
+    vf12 = intersect(vf1,vf2)
+message('vf12:  ',length(vf12))
 
   # obj1
-  # obj1@assays$DA4CA.1@var.features= vf12
-  # print('DONE VAR.FEAT')
-  # print(dim( obj1@assays$DA4CA.1@counts ))
-  # obj1@assays$DA4CA.1@counts =  obj1@assays$DA4CA.1@counts[vf12,] # OR GetAssayData(object = obj1, assay = "DA4CA.1", slot = "counts")
-  # print('DONE counts')
-  # obj1@assays$DA4CA.1@scale.data = obj1@assays$DA4CA.1@scale.data[vf12,]
-  # print('DONE scale.data')
-  # obj1@assays$DA4CA.1@data = obj1@assays$DA4CA.1@data[vf12,]
-  # print('DONE data')
-
+  obj1@assays$IP4CI.1@var.features= vf12
+  print('DONE VAR.FEAT')
+  print(dim( obj1@assays$IP4CI.1@counts ))
+  obj1@assays$IP4CI.1@counts =  obj1@assays$IP4CI.1@counts[vf12,] # OR GetAssayData(object = obj1, assay = "IP4CI.1", slot = "counts")
+  print('DONE counts')
+  obj1@assays$IP4CI.1@scale.data = obj1@assays$IP4CI.1@scale.data[vf12,]
+  print('DONE scale.data')
+  obj1@assays$IP4CI.1@data = obj1@assays$IP4CI.1@data[vf12,]
+  print('DONE data')
 
   # obj2
-  # obj2@assays$DA4CA.2@var.features= vf12
-  # obj2@assays$DA4CA.2@counts =  obj2@assays$DA4CA.2@counts[vf12,]
-  # obj2@assays$DA4CA.2@scale.data = obj2@assays$DA4CA.2@scale.data[vf12,]
-  # obj2@assays$DA4CA.2@data = obj2@assays$DA4CA.2@data[vf12,]
-# print('DONE obj2')
+obj2@assays$IP4CI.2@var.features= vf12
+obj2@assays$IP4CI.2@counts =  obj2@assays$IP4CI.2@counts[vf12,]
+obj2@assays$IP4CI.2@scale.data = obj2@assays$IP4CI.2@scale.data[vf12,]
+obj2@assays$IP4CI.2@data = obj2@assays$IP4CI.2@data[vf12,]
+print('DONE obj2')
 
 }
   # 5. make sure cell-type names are R valid
-  # obj1=RnamingCTconv(obj1)
-  # obj2=RnamingCTconv(obj2)
+  obj1=RnamingCTconv(obj1)
+  obj2=RnamingCTconv(obj2)
 
-  # saveRDS(obj1, file=paste0(res_dir,genes2keep,obj1_fname))
-  # saveRDS(obj2, file=paste0(res_dir,genes2keep,obj2_fname))
+  saveRDS(obj1, file=paste0(res_dir,genes2keep,obj1_fname))
+  saveRDS(obj2, file=paste0(res_dir,genes2keep,obj2_fname))
 
   obj1 =readRDS(file=paste0(res_dir,genes2keep,obj1_fname))
   print(obj1)
@@ -96,14 +95,14 @@ if(genes2keep == 'unionVarG')
   # obj1@meta.data = obj1@meta.data[,commonCol]
   # obj2@meta.data = obj2@meta.data[,commonCol]
   annot =rbind(obj1@meta.data,obj2@meta.data)
-  # plotMetadataStat(annot, data_dir)
-  # annot_stat = getMetadataStat(annot)
-  # write.table(annot_stat, file = paste0(data_dir,'annot_stat.txt'), sep = "\t", quote = FALSE, row.names = TRUE)
+  plotMetadataStat(annot, data_dir)
+  annot_stat = getMetadataStat(annot)
+  write.table(annot_stat, file = paste0(data_dir,'annot_stat.txt'), sep = "\t", quote = FALSE, row.names = TRUE)
 
   # 7.vis
   dim_name = 'umap'
-  # obj1 = visObj(obj1,dim_name,paste0(res_dir,id.list[[1]],'_vis.pdf'))
-  # obj2 = visObj(obj2,dim_name,paste0(res_dir,id.list[[2]],'_vis.pdf'))
+  obj1 = visObj(obj1,dim_name,paste0(res_dir,id.list[[1]],'_vis.pdf'))
+  obj2 = visObj(obj2,dim_name,paste0(res_dir,id.list[[2]],'_vis.pdf'))
 
   # 8. general analysis on obj list including: marker genes, gsea, Go & pathway enrichment analysis
   # markers1 = FindAllMarkers(obj1, logfc.threshold = 0.25, min.pct = 0.1, test.use="MAST")
