@@ -17,6 +17,7 @@
 ################################  main run #####################################
 #```{r clean_env}
 rm(list = ls())
+args = commandArgs(trailingOnly=TRUE)
 #```
 
 
