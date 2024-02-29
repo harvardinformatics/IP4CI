@@ -9,6 +9,8 @@ run_00_preprocessData(
   res_dir,
   id.list,
   obj.fname.list,
+  convertG.list,
+  processObjOpt,
   typeColumnToUse.list,
   assaySlotToUse.list
 )
@@ -21,6 +23,10 @@ run_00_preprocessData(
 \item{id.list}{id names for the objects}
 
 \item{obj.fname.list}{file names for the objects}
+
+\item{convertG.list}{to convert genes to human T,F}
+
+\item{processObjOpt}{T or F to process object}
 
 \item{typeColumnToUse.list}{list of column name holds the cell-type labels}
 

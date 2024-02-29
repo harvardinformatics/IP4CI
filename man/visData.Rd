@@ -20,5 +20,5 @@ visualize dataframe
 }
 \examples{
 obj=x
-processObj(obj)
+visData(df,annot,p.df,opfname)
 }

@@ -4,14 +4,7 @@
 \alias{run_01_processData}
 \title{run_01_processData}
 \usage{
-run_01_processData(
-  data_dir,
-  res_dir,
-  id.list,
-  obj.fname.list,
-  processObjOpt,
-  genes2keep
-)
+run_01_processData(data_dir, res_dir, id.list, obj.fname.list, genes2keep)
 }
 \arguments{
 \item{data_dir}{data directory folder name}
@@ -21,8 +14,6 @@ run_01_processData(
 \item{id.list}{id names for the objects}
 
 \item{obj.fname.list}{file names for the objects}
-
-\item{processObjOpt}{T or F to process object}
 
 \item{genes2keep}{which genes to keep between the two objects}
 }
@@ -43,6 +34,5 @@ id2='human'
 obj1_fname='mouse_sc.RDS'
 obj2_fname='human_sc.RDS'
 genes2keep='commonVarG'
-processObjOpt = F
 run_01_processData(data_dir,res_dir, id.list=c(id1,id2),obj.fname.list =c(obj1_fname,obj2_fname),genes2keep)
 }
