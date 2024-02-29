@@ -18,6 +18,8 @@
 #```{r clean_env}
 rm(list = ls())
 args = commandArgs(trailingOnly=TRUE)
+#R CMD INSTALL --preclean --no-multiarch --with-keep.source DA4CA
+library(DA4CA)
 #```
 
 
@@ -28,8 +30,8 @@ run_packages()
 ################################################################################
 # folders & variables needed by the main scripts
 #```{r var}
-expr_dir = '/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/brain/'
-data_dir = '/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/brain/data/'
+expr_dir = 'brain/'
+data_dir = 'brain/data/'
 
 # variables needed by the main scripts
 
