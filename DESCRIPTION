@@ -1,6 +1,6 @@
-Package: DA4CA
+Package: IP4CI
 Type: Package
-Title: Data alignment for cell-type annotation
+Title: IP4CI: an interpretable pathway-based computational method for cross-species cell-type identification from single cell data
 Version: 0.1.0
 Author: Rawan Olayan
 Maintainer: The package maintainer <rawanolayan@fas.harvard.edu>
@@ -24,7 +24,6 @@ Collate:
     'getMetadataStat.R'
     'getOverlapMarkers.R'
     'getPathwaysInfo.R'
-    'hello.R'
     'jaccard.R'
     'mergeMultiFiles.R'
     'performMarkersAnalysis.R'
@@ -55,7 +54,8 @@ Collate:
     'processIntegratedres_allCT.R'
     'run_05_dataIntegration.R'
     'run_06_similarityCalculationIntegration.R'
-    'runDA4CA.R'
+    'runIP4CI.R'
+    'runIP4CI_ct.R'
     'SubsetObjVarF.R'
   'selectCCA.R'
 Suggests: 

@@ -1,10 +1,12 @@
 # DA4CA
-Data alignment for cell-type annotation.
+IP4CI: an interpretable pathway-based computational method for cross-species cell-type identification from single cell data
 
-input: two seurat objects, along with thier metadata
-Note: All the gene names were converted to human gene.
+input: two seurat objects, along with their metadata
+Note: All the gene names should be converted to human gene
+
+installation:
+From terminal type:
+R CMD INSTALL --no-multiarch --with-keep.source IP4CI
 
 
-git pull --rebase origin main
-git commit -a -m 'comments'
-git push origin main
+
