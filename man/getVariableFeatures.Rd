@@ -7,7 +7,7 @@
 getVariableFeatures(sc)
 }
 \arguments{
-\item{sc_obj}{obj}
+\item{sc}{obj}
 }
 \value{
 name of method used to select fetaures
@@ -16,5 +16,5 @@ name of method used to select fetaures
 get method of variable features from obj
 }
 \examples{
-getVariableFeatures(sc_obj)
+getVariableFeatures(sc)
 }

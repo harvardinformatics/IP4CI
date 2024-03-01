@@ -7,9 +7,9 @@
 getCommonPathways(p1, p2)
 }
 \arguments{
-\item{p1}{CCA res}
+\item{p1}{list of pathways from dataset 1 selected for cell-type x}
 
-\item{p2}{metadata}
+\item{p2}{list of pathways from dataset 2 selected for cell-type y}
 }
 \value{
 commpnP common set of pathways
@@ -18,5 +18,5 @@ commpnP common set of pathways
 get common  pathways between two lists of pathways
 }
 \examples{
-run_07_rankPathways()
+getCommonPathways(p1,p2)
 }

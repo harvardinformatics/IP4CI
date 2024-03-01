@@ -22,9 +22,8 @@ run_00_preprocessData(
 
 \item{id.list}{id names for the objects}
 
-\item{obj.fname.list}{file names for the objects}
-
-\item{convertG.list}{to convert genes to human T,F}
+\item{obj.fname.list}{file names for the objects
+#' @param convertG.list to convert genes to human T,F}
 
 \item{processObjOpt}{T or F to process object}
 
@@ -36,14 +35,6 @@ run_00_preprocessData(
 preprocess data
 }
 \examples{
-data_name = 'panc'
-expr_dir =  paste0('/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/',data_name)
-data_dir =  paste0(expr_dir,'/data/')
-res_dir =  paste0(expr_dir,'/01_processData/')
-createDir(res_dir)
-id.list=c('mouse','human')
-obj.fname.list=c('mouse_sc.RDS','human_sc.RDS')
-typeColumnToUse.list=c('cell.names','cell.names') # later replaced by 'type'
-assaySlotToUse.list=list('integrated','SCT')
-run_00_preprocessData(data_dir,res_dir, id.list,obj.fname.list,typeColumnToUse.list,assaySlotToUse.list)
+run_00_preprocessData(data_dir,res_dir, id.list,obj.fname.list, convertG.list,processObjOpt,
+typeColumnToUse.list,assaySlotToUse.list)
 }

@@ -7,9 +7,9 @@
 run_04_mergeTwoDatasets(df1, df2)
 }
 \arguments{
-\item{merged_score1}{merged scoring files for dataset 1}
+\item{df1}{merged scoring files for dataset 1}
 
-\item{merged_score2}{merged scoring files for dataset 2}
+\item{df2}{merged scoring files for dataset 2}
 }
 \value{
 mergedFile merged file from two datasets

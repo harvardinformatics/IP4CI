@@ -7,11 +7,11 @@
 selectCCA(cca_res, select_opt, select_opt_cutoff)
 }
 \arguments{
+\item{cca_res}{CCA results}
+
 \item{select_opt}{option to select dims}
 
 \item{select_opt_cutoff}{cutoff to select dims}
-
-\item{cor}{CCA cor}
 }
 \value{
 selected_dims selected dims to use

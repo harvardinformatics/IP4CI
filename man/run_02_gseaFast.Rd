@@ -39,13 +39,5 @@ run_02_gseaFast(
 score samples with gsea for a single cell-type at a time
 }
 \examples{
-data_dir =  paste0(expr_dir,'/data/')
-res_dir =  paste0(expr_dir,'/02_runGSEA/')
-createDir(res_dir)
-dataset_name='mouse'
-obj='mouse_sc.RDS'
-dataType = 'norm' # use normalized obj data slot
-geneType = 'var' # use variable genes
-pathwaydatabase = 'reactome.db'
 run_02_gseaFast(data_dir,res_dir, dataset_name,expr,annot,dataType,geneType,pathwaydatabase,ct)
 }

@@ -36,13 +36,5 @@ run_02_gsea(
 score samples with gsea for serial run on cell-types of an obj
 }
 \examples{
-data_dir =  paste0(expr_dir,'/data/')
-res_dir =  paste0(expr_dir,'/02_runGSEA/')
-createDir(res_dir)
-dataset_name='mouse'
-obj'mouse_sc.RDS'
-dataType = 'norm' # use normalized obj data slot
-geneType = 'var' # use variable genes
-pathwaydatabase = 'reactome.db'
 run_02_gsea(data_dir,res_dir, dataset_name,expr,annot,dataType,geneType,pathwaydatabase)
 }

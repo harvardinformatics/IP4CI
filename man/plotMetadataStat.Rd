@@ -7,13 +7,13 @@
 plotMetadataStat(annot, res_dir)
 }
 \arguments{
-\item{res_dir}{results directory to save plot}
+\item{annot}{metadata}
 
-\item{metadata}{metadata}
+\item{res_dir}{results directory to save plot}
 }
 \description{
 plot Stat of metadata
 }
 \examples{
-plotMetadataStat(metadata,opfname)
+plotMetadataStat(annot,opfname)
 }

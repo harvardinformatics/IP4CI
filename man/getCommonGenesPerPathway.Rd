@@ -7,6 +7,8 @@
 getCommonGenesPerPathway(rankedPathways, enrichedG_1, enrichedG_2)
 }
 \arguments{
+\item{rankedPathways}{dataframe of ranked pathways from 07 step}
+
 \item{enrichedG_1}{genes enriched per pathway for dataset 1}
 
 \item{enrichedG_2}{genes enriched per pathway for dataset 2}

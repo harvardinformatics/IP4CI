@@ -16,11 +16,5 @@ mergedFile merged file of all files
 merge sample scores from one dataset
 }
 \examples{
-data_dir =  paste0(expr_dir, '03_sampleScoring/')
-res_dir =  paste0(expr_dir, '04_mergeTwoDatasets/')
-dir.create(res_dir)
-pattern_s = paste0(filter_opt,filter_cutoff,sample_cutoff,'*',id1,'*.RData')
-print(pattern_s)
-mergingFiles_lst =  list.files(data_dir, pattern=glob2rx(pattern_s))
 mergeMultiFiles(my.files)
 }

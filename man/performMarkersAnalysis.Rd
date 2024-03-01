@@ -7,15 +7,15 @@
 performMarkersAnalysis(markers, dataset_id, res_dir)
 }
 \arguments{
+\item{markers}{Markers of obj}
+
 \item{dataset_id}{dataset_id of obj}
 
 \item{res_dir}{results_directory to save results and plot}
-
-\item{Markers}{Markers of obj}
 }
 \description{
 perform Analysis using Markers of obj
 }
 \examples{
-performMarkersAnalysis(Markers,opfname)
+performMarkersAnalysis(Markers,dataset_id,opfname)
 }

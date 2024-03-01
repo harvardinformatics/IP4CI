@@ -17,7 +17,5 @@ plotCombineRankingPathways(fname.lst, ct.lst, res_dir)
 combine rankingP across all cell-types
 }
 \examples{
-fname.lst = paste0(data_dir,c('rankP_quiescent_stellate.txt','rankP_macrophage.txt'))
-ct.lst = c("quiescent_stellate","macrophage")
 plotCombineRankingPathways(fname.lst,ct.lst,res_dir)
 }

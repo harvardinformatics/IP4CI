@@ -7,19 +7,19 @@
 getOverlapMarkers(markers1, id1, markers2, id2, res_dir)
 }
 \arguments{
+\item{markers1}{Markers of obj1}
+
 \item{id1}{id of markers1}
+
+\item{markers2}{Markers of obj2}
 
 \item{id2}{id of markers2}
 
 \item{res_dir}{results_directory to save results and plot}
-
-\item{Markers1}{Markers of obj1}
-
-\item{Markers2}{Markers of obj2}
 }
 \description{
 get Overlap Markers between two objs
 }
 \examples{
-getOverlapMarkers(markers1,markers2,res_dir)
+getOverlapMarkers(markers1,id1,markers2,id2,res_dir)
 }

@@ -29,6 +29,8 @@ runIP4CI(
 
 \item{obj.fname.list}{file names for the objects}
 
+\item{convertG.list}{whether to convert mouse gene to human genes T/F}
+
 \item{typeColumnToUse.list}{list of column name holds the cell-type labels}
 
 \item{assaySlotToUse.list}{list of name of assay slot}
@@ -55,27 +57,5 @@ runIP4CI(
 run IP4CI main function to run the analysis using two objects
 }
 \examples{
-expr_dir = ''
-createDir(expr_dir)
-id.list=c('mouse','human')
-obj.fname.list=c('mouse_sc.RDS','human_sc.RDS')
-typeColumnToUse.list=c('cell.names','cell.names')
-assaySlotToUse.list=list('integrated','SCT')
-convertG.list = c(T,F)
-processObjOpt = F
-convertG.list = c(FALSE,FALSE)
-normObj.list = c(FALSE,FALSE)
-genes2keep = 'commonVarG'
-pathwaydatabase = 'reactome.db'
-dataType = 'norm'
-geneType = 'var'
-filter_opt = 'pvalue'
-filter_cutoff = 0.05
-sample_cutoff = 0.07
-topRanked = 10
-runIP4CI(expr_dir, id.list,obj.fname.list,convertG.list,normObj.list,processObjOpt,typeColumnToUse.list,assaySlotToUse.list,
-genes2keep,
-pathwaydatabase,dataType,geneType,
-filter_opt,filter_cutoff,sample_cutoff,
-topRanked)
+runIP4CI(expr_dir, id.list,obj.fname.list,
 }

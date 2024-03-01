@@ -4,10 +4,10 @@
 \alias{getMetadataStat}
 \title{getMetadataStat}
 \usage{
-getMetadataStat(annot, opfname)
+getMetadataStat(annot)
 }
 \arguments{
-\item{metadata}{metadata}
+\item{annot}{metadata}
 }
 \value{
 metadata_updated updated metadata
@@ -16,5 +16,5 @@ metadata_updated updated metadata
 get Stat of metadata
 }
 \examples{
-getMetadataStat(metadata)
+getMetadataStat(annot)
 }

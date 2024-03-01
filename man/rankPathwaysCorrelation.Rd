@@ -12,8 +12,6 @@ rankPathwaysCorrelation(cca_res, p.info, w_opt)
 \item{p.info}{pathways info}
 
 \item{w_opt}{to use weighted pathways scores}
-
-\item{id.list}{id names for the objects}
 }
 \value{
 rankP.cor  ranked pathways based on correlation

@@ -10,6 +10,8 @@ run_05_CCA(obj1, obj2, num.cc)
 \item{obj1}{object of dataset 1}
 
 \item{obj2}{object of dataset 2}
+
+\item{num.cc}{number of cc dimensions}
 }
 \value{
 ccaRes CCA results
@@ -18,5 +20,5 @@ ccaRes CCA results
 run Seurat CCA over two objectes
 }
 \examples{
-run_05_CCA(obj1,obj2)
+run_05_CCA(obj1,obj2,num.cc)
 }

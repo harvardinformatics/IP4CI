@@ -7,7 +7,7 @@
 calcSim_avgCT(df, annot, id.list, ct, res_dir)
 }
 \arguments{
-\item{df}{dataframe ofsamples embeddings}
+\item{df}{dataframe of cell embeddings}
 
 \item{annot}{metadata}
 

@@ -30,6 +30,8 @@ runIP4CI_ct(
 
 \item{obj.fname.list}{file names for the objects}
 
+\item{convertG.list}{whether to convert mouse gene to human genes T/F}
+
 \item{typeColumnToUse.list}{list of column name holds the cell-type labels}
 
 \item{assaySlotToUse.list}{list of name of assay slot}

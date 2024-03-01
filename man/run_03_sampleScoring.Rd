@@ -19,8 +19,5 @@ run_03_sampleScoring(GSEA_res, filter_opt, filter_cutoff, sample_cutoff)
 score and filter samples based on gsea results
 }
 \examples{
-data_dir =  paste0(expr_dir,'/02_runGSEA/')
-res_dir =  paste0(expr_dir,'/03_sampleScoring/')
-createDir(res_dir)
 run_03_sampleScoring(GSEA_res,filter_opt,filter_cutoff,sample_cutoff)
 }
