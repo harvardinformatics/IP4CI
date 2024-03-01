@@ -1,6 +1,6 @@
 #' @title  calcSim_avgCT
 #' @description calculate average similarity between two datasets based on CCA info for each cell-type
-#' @param df dataframe ofsamples embeddings
+#' @param df dataframe of cell embeddings
 #' @param annot metadata
 #' @param id.list ids for the first and second datasets
 #' @param ct cell-type

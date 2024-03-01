@@ -1,6 +1,6 @@
 #' @title  selectCCA
 #' @description select important CCA dims
-#' @param cor CCA cor
+#' @param cca_res CCA results
 #' @param select_opt option to select dims
 #' @param select_opt_cutoff cutoff to select dims
 #' @return selected_dims selected dims to use

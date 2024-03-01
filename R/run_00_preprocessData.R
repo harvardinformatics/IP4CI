@@ -4,21 +4,13 @@
 #' @param res_dir result directory folder name
 #' @param id.list id names for the objects
 #' @param obj.fname.list file names for the objects
-#' @param typeColumnToUse.list list of column name holds the cell-type labels
-#' @param convertG.list to convert genes to human T,F
+#' #' @param convertG.list to convert genes to human T,F
 #' @param processObjOpt T or F to process object
+#' @param typeColumnToUse.list list of column name holds the cell-type labels
 #' @param assaySlotToUse.list list of name of assay slot
 #' @examples
-#' data_name = 'panc'
-#' expr_dir =  paste0('/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/',data_name)
-#' data_dir =  paste0(expr_dir,'/data/')
-#' res_dir =  paste0(expr_dir,'/01_processData/')
-#' createDir(res_dir)
-#' id.list=c('mouse','human')
-#' obj.fname.list=c('mouse_sc.RDS','human_sc.RDS')
-#' typeColumnToUse.list=c('cell.names','cell.names') # later replaced by 'type'
-#' assaySlotToUse.list=list('integrated','SCT')
-#' run_00_preprocessData(data_dir,res_dir, id.list,obj.fname.list,typeColumnToUse.list,assaySlotToUse.list)
+#' run_00_preprocessData(data_dir,res_dir, id.list,obj.fname.list, convertG.list,processObjOpt,
+#' typeColumnToUse.list,assaySlotToUse.list)
 #' @export
 
 ################################################################################

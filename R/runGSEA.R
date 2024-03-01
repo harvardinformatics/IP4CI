@@ -3,17 +3,8 @@
 #' @param pathwaydatabase pathway database
 #' @param DE_lst list of logFCs
 #' @param reference_samples control samples
-#' @param dataset_name datasetname
 #' @examples
-#' data_dir =  paste0(expr_dir,'/data/')
-#' res_dir =  paste0(expr_dir,'/02_runGSEA/')
-#' createDir(res_dir)
-#' dataset_name='mouse'
-#' obj_fname='mouse_sc.RDS'
-#' dataType = 'norm' # use normalized obj data slot
-#' geneType = 'var' # use variable genes
-#' pathwaydatabase = 'reactome.db'
-#' run_02_gsea(pathwaydatabase,DE_lst,reference_samples,dataset_name)
+#' run_02_gsea(pathwaydatabase,DE_lst,reference_samples)
 #' @export
 
 ###############################################################################

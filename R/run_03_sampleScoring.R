@@ -5,9 +5,6 @@
 #' @param filter_cutoff 0.05
 #' @param sample_cutoff percentage of samples meets the cutoff of filter i.e. 0.1
 #' @examples
-#' data_dir =  paste0(expr_dir,'/02_runGSEA/')
-#' res_dir =  paste0(expr_dir,'/03_sampleScoring/')
-#' createDir(res_dir)
 #' run_03_sampleScoring(GSEA_res,filter_opt,filter_cutoff,sample_cutoff)
 #' @export
 ###############################################################################

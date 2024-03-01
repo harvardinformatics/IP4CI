@@ -7,16 +7,6 @@
 #' @param genes2keep which genes to keep between the two objects
 #' @return processedData list of processedData: obj1,obj2, and annot
 #' @examples
-#' data_name = 'panc'
-#' expr_dir =  paste0('/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/',data_name)
-#' data_dir =  paste0(expr_dir,'/data/')
-#' res_dir =  paste0(expr_dir,'/01_processData/')
-#' createDir(res_dir)
-#' id1='mouse'
-#' id2='human'
-#' obj1_fname='mouse_sc.RDS'
-#' obj2_fname='human_sc.RDS'
-#' genes2keep='commonVarG'
 #' run_01_processData(data_dir,res_dir, id.list=c(id1,id2),obj.fname.list =c(obj1_fname,obj2_fname),genes2keep)
 #' @export
 

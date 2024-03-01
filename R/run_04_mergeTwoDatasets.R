@@ -1,7 +1,7 @@
 #' @title  run_04_mergeTwoDatasets
 #' @description merge sample scores from two datasets
-#' @param merged_score1 merged scoring files for dataset 1
-#' @param merged_score2 merged scoring files for dataset 2
+#' @param df1 merged scoring files for dataset 1
+#' @param df2 merged scoring files for dataset 2
 #' @return  mergedFile merged file from two datasets
 #' @examples
 #' run_04_mergeTwoDatasets(merged_score1,merged_score2)

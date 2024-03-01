@@ -1,10 +1,10 @@
 #' @title  getCommonPathways
 #' @description get common  pathways between two lists of pathways
-#' @param p1 CCA res
-#' @param p2 metadata
+#' @param p1 list of pathways from dataset 1 selected for cell-type x
+#' @param p2 list of pathways from dataset 2 selected for cell-type y
 #' @return commpnP common set of pathways
 #' @examples
-#' run_07_rankPathways()
+#' getCommonPathways(p1,p2)
 #' @export
 ################################################################################
 getCommonPathways <- function(p1,p2)

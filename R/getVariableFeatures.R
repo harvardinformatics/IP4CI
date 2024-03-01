@@ -1,9 +1,9 @@
 #' @title  getVariableFeatures
 #' @description get method of variable features from obj
-#' @param sc_obj obj
+#' @param sc obj
 #' @return name of method used to select fetaures
 #' @examples
-#' getVariableFeatures(sc_obj)
+#' getVariableFeatures(sc)
 #' @export
 ################################################################################
 getVariableFeatures = function(sc){

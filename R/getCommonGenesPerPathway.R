@@ -1,5 +1,6 @@
 #' @title  getCommonGenesPerPathway
 #' @description get gene members common per pathway between two datasets
+#' @param rankedPathways dataframe of ranked pathways from 07 step
 #' @param enrichedG_1 genes enriched per pathway for dataset 1
 #' @param enrichedG_2 genes enriched per pathway for dataset 2
 #' @return p_g_common common genes per pathway

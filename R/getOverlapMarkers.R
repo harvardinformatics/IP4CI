@@ -1,12 +1,12 @@
 #' @title  getOverlapMarkers
 #' @description get Overlap Markers between two objs
-#' @param Markers1 Markers of obj1
-#' @param Markers2 Markers of obj2
+#' @param markers1 Markers of obj1
 #' @param id1 id of markers1
+#' @param markers2 Markers of obj2
 #' @param id2 id of markers2
 #' @param res_dir results_directory to save results and plot
 #' @examples
-#'getOverlapMarkers(markers1,markers2,res_dir)
+#'getOverlapMarkers(markers1,id1,markers2,id2,res_dir)
 #'@export
 ###############################################################################
 getOverlapMarkers <- function(markers1,id1,markers2,id2,res_dir)

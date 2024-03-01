@@ -5,18 +5,10 @@
 #' @param dataset_name id name for the object
 #' @param expr data from object
 #' @param annot annot from object
-#' @param pathwaydatabase pathway database
 #' @param dataType which obj data slot to use
 #' @param geneType which genes to use
+#' @param pathwaydatabase pathway database
 #' @examples
-#' data_dir =  paste0(expr_dir,'/data/')
-#' res_dir =  paste0(expr_dir,'/02_runGSEA/')
-#' createDir(res_dir)
-#' dataset_name='mouse'
-#' obj'mouse_sc.RDS'
-#' dataType = 'norm' # use normalized obj data slot
-#' geneType = 'var' # use variable genes
-#' pathwaydatabase = 'reactome.db'
 #' run_02_gsea(data_dir,res_dir, dataset_name,expr,annot,dataType,geneType,pathwaydatabase)
 #' @export
 
@@ -54,17 +46,5 @@ run_02_gsea <- function(data_dir,res_dir, dataset_name,expr,annot,dataType,geneT
 }
 
 ################################################################################
-# data_name = 'panc'
-# expr_dir =  paste0('/Users/rao198/OneDrive\ -\ Harvard\ University/Informatics/doc/paper/DA4LT/V1/analysis/',data_name,'/')
-# data_dir =  paste0(expr_dir,'/01_processData/')
-# res_dir =  paste0(expr_dir,'/02_runGSEA/')
-# createDir(res_dir)
-# id='mouse'
-# obj='commonVarGmouse_sc.RDS'
-# dataType = 'norm' # use normalized obj data slot
-# geneType = 'var' # use variable genes
-# pathwaydatabase = 'reactome.db'
-# run_02_gsea(data_dir,res_dir, dataset_name,obj,dataType,geneType,pathwaydatabase)
-
 
 

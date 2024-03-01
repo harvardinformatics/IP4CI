@@ -4,6 +4,7 @@
 #' @param expr_dir experiment directory folder name
 #' @param id.list id names for the objects
 #' @param obj.fname.list file names for the objects
+#' @param convertG.list whether to convert mouse gene to human genes T/F
 #' @param typeColumnToUse.list list of column name holds the cell-type labels
 #' @param assaySlotToUse.list list of name of assay slot
 #' @param genes2keep which genes to keep between the two objects
@@ -17,30 +18,14 @@
 #' @param topRanked 10 top ranked biological findings to investigate, used for pathways & genes
 
 #' @examples
-#' expr_dir = ''
-#' createDir(expr_dir)
-#' id.list=c('mouse','human')
-#' obj.fname.list=c('mouse_sc.RDS','human_sc.RDS')
-#' typeColumnToUse.list=c('cell.names','cell.names')
-#' assaySlotToUse.list=list('integrated','SCT')
-#' convertG.list = c(T,F)
-#' processObjOpt = F
-#' convertG.list = c(FALSE,FALSE)
-#' normObj.list = c(FALSE,FALSE)
-#' genes2keep = 'commonVarG'
-#' pathwaydatabase = 'reactome.db'
-#' dataType = 'norm'
-#' geneType = 'var'
-#' filter_opt = 'pvalue'
-#' filter_cutoff = 0.05
-#' sample_cutoff = 0.07
-#' topRanked = 10
-
-#' runIP4CI(expr_dir, id.list,obj.fname.list,convertG.list,normObj.list,processObjOpt,typeColumnToUse.list,assaySlotToUse.list,
-#' genes2keep,
-#' pathwaydatabase,dataType,geneType,
-#' filter_opt,filter_cutoff,sample_cutoff,
-#' topRanked)
+#' runIP4CI(expr_dir, id.list,obj.fname.list,
+# convertG.list,
+# typeColumnToUse.list,assaySlotToUse.list,
+# genes2keep,
+# processObjOpt,
+# pathwaydatabase,dataType,geneType,
+# filter_opt,filter_cutoff,sample_cutoff,
+# topRanked)
 
 #' @export
 ################################################################################

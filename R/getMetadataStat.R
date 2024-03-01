@@ -1,12 +1,12 @@
 #' @title  getMetadataStat
 #' @description get Stat of metadata
-#' @param metadata metadata
+#' @param annot metadata
 #' @return metadata_updated updated metadata
 #' @examples
-#' getMetadataStat(metadata)
+#' getMetadataStat(annot)
 #' @export
 ################################################################################
-getMetadataStat <- function(annot,opfname)
+getMetadataStat <- function(annot)
 {
   print('getMetadataStat:...')
   print(head(annot))

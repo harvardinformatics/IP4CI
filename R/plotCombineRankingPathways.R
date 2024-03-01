@@ -4,8 +4,6 @@
 #' @param ct.lst list of cell-types according to the files
 #' @param res_dir result directory to save the plot
 #' @examples
-#' fname.lst = paste0(data_dir,c('rankP_quiescent_stellate.txt','rankP_macrophage.txt'))
-#' ct.lst = c("quiescent_stellate","macrophage")
 #' plotCombineRankingPathways(fname.lst,ct.lst,res_dir)
 #' @export
 ################################################################################

@@ -4,6 +4,7 @@
 #' @param expr_dir experiment directory folder name
 #' @param id.list id names for the objects
 #' @param obj.fname.list file names for the objects
+#' @param convertG.list whether to convert mouse gene to human genes T/F
 #' @param typeColumnToUse.list list of column name holds the cell-type labels
 #' @param assaySlotToUse.list list of name of assay slot
 #' @param genes2keep which genes to keep between the two objects

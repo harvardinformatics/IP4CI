@@ -1,7 +1,6 @@
 #' @title  rankPathwaysCorrelation
 #' @description rank pathways based on correlation
 #' @param cca_res CCA res
-#' @param id.list id names for the objects
 #' @param p.info pathways info
 #' @param w_opt to use weighted pathways scores
 #' @return rankP.cor  ranked pathways based on correlation

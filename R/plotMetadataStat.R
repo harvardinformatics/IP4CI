@@ -1,9 +1,9 @@
 #' @title  plotMetadataStat
 #' @description plot Stat of metadata
-#' @param metadata metadata
+#' @param annot metadata
 #' @param res_dir results directory to save plot
 #' @examples
-#' plotMetadataStat(metadata,opfname)
+#' plotMetadataStat(annot,opfname)
 #' @export
 ################################################################################
 

@@ -1,10 +1,10 @@
 #' @title  performMarkersAnalysis
 #' @description perform Analysis using Markers of obj
-#' @param Markers Markers of obj
+#' @param markers Markers of obj
 #' @param dataset_id dataset_id of obj
 #' @param res_dir results_directory to save results and plot
 #' @examples
-#'performMarkersAnalysis(Markers,opfname)
+#'performMarkersAnalysis(Markers,dataset_id,opfname)
 #'@export
 ###############################################################################
 performMarkersAnalysis <- function(markers,dataset_id,res_dir)
